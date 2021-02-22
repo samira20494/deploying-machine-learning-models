@@ -11,10 +11,10 @@ from setuptools import find_packages, setup
 # Package meta-data.
 NAME = 'regression_model'
 DESCRIPTION = 'Train and deploy regression model.'
-URL = 'your github project'
-EMAIL = 'your_email@email.com'
-AUTHOR = 'Your name'
-REQUIRES_PYTHON = '>=3.6.0'
+URL = 'https://github.com/samira20494/deploying-machine-learning-models.git'
+EMAIL = 'samira.alizadehzoj@gmail.com'
+AUTHOR = 'Samira Alizadeh'
+REQUIRES_PYTHON = '>=3.7.0'
 
 
 # What packages are required for this module to be executed?
@@ -72,9 +72,9 @@ setup(
         'License :: OSI Approved :: MIT License',
         'Programming Language :: Python',
         'Programming Language :: Python :: 3',
-        'Programming Language :: Python :: 3.6',
         'Programming Language :: Python :: 3.7',
         'Programming Language :: Python :: 3.8',
+        'Programming Language :: Python :: 3.9',
         'Programming Language :: Python :: Implementation :: CPython',
         'Programming Language :: Python :: Implementation :: PyPy'
     ],
