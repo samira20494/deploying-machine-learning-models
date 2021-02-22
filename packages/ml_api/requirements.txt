@@ -1,0 +1,6 @@
+# api
+flask==1.1.2
+
+# local regression_model package
+# update with your local path
+-e "/Volumes/Personal/Learning/Udemy/DeployMLModels/repo/deploying-machine-learning-models/packages/regression_model"
