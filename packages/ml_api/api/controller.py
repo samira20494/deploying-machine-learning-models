@@ -1,11 +1,13 @@
 from flask import Blueprint, request, jsonify
 from regression_model.predict import make_prediction
 from regression_model import __version__ as _version
-from api import __version__ as api_version
 
 from api.config import get_logger
+from api.validation import validate_inputs
+from api import __version__ as api_version
 
 _logger = get_logger(logger_name=__name__)
+
 
 prediction_app = Blueprint('prediction_app', __name__)
 
@@ -13,7 +15,8 @@ prediction_app = Blueprint('prediction_app', __name__)
 @prediction_app.route('/health', methods=['GET'])
 def health():
     if request.method == 'GET':
-        return 'hello!'
+        _logger.info('health status OK')
+        return 'ok'
 
 
 @prediction_app.route('/version', methods=['GET'])
@@ -34,7 +37,7 @@ def predict():
         input_data, errors = validate_inputs(input_data=json_data)
 
         # Step 3: Model prediction
-        result = make_prediction(input_data=json_data)
+        result = make_prediction(input_data=input_data)
         _logger.debug(f'Outputs: {result}')
 
         # Step 4: Convert numpy ndarray to list
