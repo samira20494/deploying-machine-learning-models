@@ -12,4 +12,4 @@ marshmallow==3.10.0
 # -e "/Volumes/Personal/Learning/Udemy/DeployMLModels/repo/deploying-machine-learning-models/packages/regression_model"
 
 # install from gemfury
-regression-model==0.1.0
+regression-model==1.0.0
