@@ -1,3 +1,6 @@
+
+--extra-index-url=${PIP_EXTRA_INDEX_URL}
+
 # api
 flask==1.1.2
 
@@ -6,4 +9,7 @@ marshmallow==3.10.0
 
 # local regression_model package
 # update with your local path
--e "/Volumes/Personal/Learning/Udemy/DeployMLModels/repo/deploying-machine-learning-models/packages/regression_model"
+# -e "/Volumes/Personal/Learning/Udemy/DeployMLModels/repo/deploying-machine-learning-models/packages/regression_model"
+
+# install from gemfury
+regression-model==0.1.0
