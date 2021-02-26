@@ -7,4 +7,4 @@ flask==1.1.2
 marshmallow==3.10.0
 
 # Set this to the previous model version
-regression-model==1.0.0
+regression-model==1.0.1
