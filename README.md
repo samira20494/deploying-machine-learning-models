@@ -25,3 +25,15 @@ Circle CI config reference: https://circleci.com/docs/2.0/configuration-referenc
 Environment variables in Circle CI: https://circleci.com/docs/2.0/env-vars/
 Kaggle CLI: https://github.com/Kaggle/kaggle-api
 Creating your Kaggle API Key: https://www.kaggle.com/docs/api
+
+
+# test deployment manually:
+Commands
+Make sure curl is installed (see below). Cd to the course repo scripts directory and
+then run:
+
+curl --header "Content-Type: application/json" --request POST --data @input_test.json https://deploy-ml-model-udemy.herokuapp.com/v1/predict/regression
+
+Links
+Download curl: https://curl.haxx.se/download.html
+curl documentation: https://curl.haxx.se/docs/
