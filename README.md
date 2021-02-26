@@ -37,3 +37,34 @@ curl --header "Content-Type: application/json" --request POST --data @input_test
 Links
 Download curl: https://curl.haxx.se/download.html
 curl documentation: https://curl.haxx.se/docs/
+
+# docker
+Commands:
+Docker Build (make sure you have set your PIP_EXTRA_INDEX_URL environment
+variable):
+
+Windows:
+docker build --build-arg PIP_EXTRA_INDEX_URL=%PIP_EXTRA_INDEX_URL% -t deploy-ml-model-udemy:latest .
+
+OS X / Linux:
+1- docker build --build-arg PIP_EXTRA_INDEX_URL=${PIP_EXTRA_INDEX_URL} -t ml_api:latest .
+
+View built images:
+2- docker images
+
+Run the docker image:
+3- docker run --name ml_api -d -p 8000:5000 --rm ml_api:latest
+
+View running containers:
+docker ps
+
+View container logs (get the container ID by running docker ps):
+docker logs CONTAINER_ID --tail
+
+Links
+Docker build reference:
+https://docs.docker.com/engine/reference/commandline/build/
+Docker run reference:
+https://docs.docker.com/engine/reference/run/
+Docker logs reference:
+https://docs.docker.com/engine/reference/commandline/container_logs/
